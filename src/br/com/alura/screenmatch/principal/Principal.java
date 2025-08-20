@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -9,7 +11,6 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme("O poderoso chefão", 1970);
-        meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -48,12 +49,7 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        // Filme filmeDoPaulo = new Filme(); A variavel Filme da esquerda
-        // ela é de referencia pode ser trocada por
-        // na direita Filme() estou criando o objeto e guardandoa referncia da variavel Filme nesse objeto
-        // var, ela vai receber os atributos da classe Filme de referencia
-
-        var filmeDoPaulo = new Filme("Dog ville", 2003);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.avalia(10);
 
@@ -64,7 +60,8 @@ public class Principal {
         System.out.println("Tamanho da lista " + listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-        System.out.println("toString do filme" + listaDeFilmes.get(0).toString());
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
 
     }
 }
